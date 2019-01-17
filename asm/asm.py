@@ -38,8 +38,6 @@ def check2_code():
     with open("./check2_code", "wb") as fd:
         fd.write(v3)
 
-
-
 if __name__ == "__main__":
     check2_code()
 
