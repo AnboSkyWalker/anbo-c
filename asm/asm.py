@@ -7,7 +7,9 @@
 
 import struct
 
-def check1_code():
+# from undebuggable
+# https://crackmes.one/crackme/5bc98bcc33c5d4110a29b2cc
+def check2_code():
     buf = struct.pack ("160B", *[
         0xb4,0xe9,0xe9,0xe9,0xe9,0xe8,0x50,0xd8,0xa6,0xa5,0x59,
         0x24,0xa7,0xa6,0x5a,0x1f,0x9c,0x93,0x78,0x78,0x78,0x78,
@@ -33,11 +35,11 @@ def check1_code():
         v3[152-i-1] = chr(v1 ^ a)
         v1 = a
     v3 = ''.join(v3)
-    with open("./check1_code", "wb") as fd:
+    with open("./check2_code", "wb") as fd:
         fd.write(v3)
 
 
 
 if __name__ == "__main__":
-    check1_code()
+    check2_code()
 
